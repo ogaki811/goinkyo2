@@ -1,0 +1,12 @@
+{
+  "liveSassCompile.settings.formats": [
+
+    {
+      "format": "expanded",
+      "extensionName": ".css",
+      "savePath": "/lib/css/"
+    }
+  ],
+  "liveSassCompile.settings.autoprefix": [],
+  "editor.fontSize": 16
+}

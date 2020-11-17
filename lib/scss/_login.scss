@@ -7,9 +7,58 @@ $min_font_size: 1.3rem;
 
 /* カラー */
 $main_font_color: #666666;
-$main_color: #FFFFFF;
+$main_color: #ffffff;
 $head_color: #603813;
+
+/* ブレイクポイントのやつ */
+$breakpoints: (
+  "sp": "screen and (min-width: 375px)",
+  "tb": "screen and (min-width: 768px)",
+) !default;
+
+@mixin mq($breakpoint: sp) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+/* flexboxのやつ */
+@mixin flexBox($jc: space-between) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: $jc;
+}
+
+/* デフォルトのやつ */
+html {
+  font-size: 62.5%;
+  position: relative;
+}
 
 body {
   font-size: $df_font_size;
+  background-image: url(../images/login_bg.svg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 65.2%;
+  min-width: 375px;
+  position: absolute;
+}
+
+.topBorder {
+  display: inline-block;
+  height: 5px;
+  img {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    vertical-align: top;
+    object-fit: cover;
+  }
+}
+
+.container {
+  width: 100%;
+
 }
