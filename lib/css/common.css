@@ -10,6 +10,33 @@ h2 {
   left: 0;
 }
 
+.bbb {
+  margin: auto;
+  padding: auto;
+}
+
+.ccc {
+  margin: auto;
+  padding: auto;
+}
+
+.ppp {
+  margin-top: 10px;
+}
+
+.ddd {
+  margin-bottom: 10px;
+}
+
+.hhh {
+  margin-top: 10px;
+}
+
+.dj_ogawa {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 body {
   margin-top: auto;
   padding: 0;
@@ -21,6 +48,3 @@ body {
   margin: 5;
 }
 /*# sourceMappingURL=common.css.map */
-.h {
-  text-align: center;
-}
