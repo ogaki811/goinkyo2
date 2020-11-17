@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+/* デフォルトの書体サイズ*/
+$df_font_size: 1.4rem;
+$title_font_size: 1.6rem;
+$min_font_size: 1.3rem;
+
+/* カラー */
+$main_font_color: #666666;
+$main_color: #FFFFFF;
+$head_color: #603813;
+
+body {
+  font-size: $df_font_size;
+}
