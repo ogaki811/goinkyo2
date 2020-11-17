@@ -3,5 +3,28 @@
 		{
 			"path": "."
 		}
+	],
+	"settings": [
+		{
+			"auto-rename-tag.activationOnLanguage": [
+			
+				"*"
+			],
+			
+			  // live sass compile
+			  "liveSassCompile.settings.formats": [
+				{
+				  "format": "expanded",
+				  "extensionName": ".css",
+				  "savePath": "/lib/css/"
+				}
+			  ],
+			  "liveSassCompile.settings.autoprefix": [
+				
+			  ]
+		  
+		}
+		
 	]
 }
+
