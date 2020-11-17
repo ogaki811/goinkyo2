@@ -1,3 +1,4 @@
+@charset "UTF-8";
 h1 {
   margin-top: auto;
 }
@@ -8,6 +9,12 @@ h2 {
 
 .aaa {
   left: 0;
+}
+
+/* デフォルトの書体サイズ*/
+/* カラー */
+body {
+  font-size: 1.4rem;
 }
 
 body {
@@ -21,6 +28,3 @@ body {
   margin: 5;
 }
 /*# sourceMappingURL=common.css.map */
-.h {
-  text-align: center;
-}
