@@ -18,35 +18,67 @@ h2 {
 /* デフォルトのやつ */
 html {
   font-size: 62.5%;
-  position: relative;
 }
 
-body {
-  font-size: 1.4rem;
+.login {
   background-image: url(../images/login_bg.svg);
-  background-attachment: fixed;
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: 65.2%;
-  min-width: 375px;
-  position: absolute;
+  background-position: 50% 50%;
+  background-attachment: fixed;
 }
 
 .topBorder {
-  display: inline-block;
-  height: 5px;
+  position: absolute;
 }
 
 .topBorder img {
   width: 100%;
-  height: 100%;
+  height: 2px;
   max-width: 100%;
   vertical-align: top;
-  object-fit: cover;
 }
 
 .container {
   width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.container .loginBox {
+  width: 90%;
+  max-width: auto;
+  height: 400px;
+  border: 1px solid #C1C1C1;
+  border-radius: 5px;
+  position: absolute;
+  left: 5%;
+  top: 30%;
+}
+
+.container .loginBox .loginImg {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.container .loginBox .inputBox {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.container .loginBox .inputBox .mail {
+  margin-bottom: 15px;
+}
+
+.container .loginBox .inputBox .mail input {
+  margin-left: 10px;
+  width: 250px;
+  height: 40px;
+}
+
+.container .loginBox .inputBox .pw input {
+  margin-left: 10px;
+  width: 250px;
+  height: 40px;
 }
 
 body {
