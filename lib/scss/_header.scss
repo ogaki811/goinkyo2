@@ -3,7 +3,6 @@
     // background-image: url(../images/goinkyosen.svg);
     // background-image: url(../images/goinkyosen.svg);
     position: relative;
-    position: relative;
     box-shadow: 0px 2px 6px 0px #e8e8e8;
 
     .goinkyoBorder {
@@ -23,4 +22,93 @@
             display: block;
         }
     }
+
+}
+
+.drawer-nav {
+
+
+    .navhead {
+        img {
+            margin: 50px auto 30px;
+            display: block;
+        }
+    }
+
+    .drawer-menu {
+        li {
+            text-align: center;
+
+            .drawer-menu-item {}
+        }
+    }
+
+    .yourpr {
+        width: 75%;
+        margin: auto;
+
+        textarea {
+            width: 100%;
+        }
+    }
+
+    .footer {
+        margin: 30px;
+
+        img {
+            display: block;
+            margin: 0 auto 10px;
+            width: 70px;
+        }
+
+        p {
+            font-size: 0.6rem;
+            text-align: center
+        }
+    }
+
+}
+
+
+.goinkyoBtnlink {
+    // width: 137px;
+    // height: 30px;
+    background: #E23527 0% 0% no-repeat padding-box;
+    border-radius: 3px;
+    opacity: 1;
+    color: #fff;
+    margin: 0 auto 10px;
+    width: 75%;
+
+    &:hover {
+        background: #860a01 0% 0% no-repeat padding-box;
+        color: #fff;
+    }
+}
+
+
+
+@include mq() {
+    .header_st {
+        display: none;
+    }
+
+    .drawer-toggle {
+        display: none;
+    }
+
+    .drawer--left .drawer-nav {
+        position: relative;
+        left: 0;
+        border-right: solid 1px #f1f1f1;
+        height: 100vh;
+
+
+        .footer {
+            position: absolute;
+            bottom: 10px;
+        }
+    }
+
+
 }

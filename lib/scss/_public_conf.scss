@@ -1,0 +1,37 @@
+$mainColor: #ffdaea;
+$subColor: #ffb4d4;
+
+$spotColor1: #b89d80;
+$spotColor2: #fffaf0;
+
+$iconColor1: #ff998c;
+$iconColor2: #bfffb3;
+$iconColor3: #ffcc66;
+$iconColor4: #ccd4ff;
+$iconColor5: #ffff99;
+$iconColor6: #bef0ff;
+
+$hovColor: #ffe6b5;
+
+@mixin icon-position($bgImg) {
+	content: '';
+	display: inline-block;
+	background-image: $bgImg;
+	background-size: contain;
+	vertical-align: middle;
+	position: absolute;
+	top: -15px;
+	left: 20px;
+}
+@mixin kagu-subMenu-icon {
+	width: 40px;
+	height: 40px;
+	top: 10px;
+	left: 12%;
+}
+@mixin tips-icon {
+	width: 60px;
+	height: 60px;
+	top: 10px;
+	left: -80px;
+}
