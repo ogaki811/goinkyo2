@@ -1,0 +1,173 @@
+@import "public_conf";
+
+$mainColor : "#333333";
+// sass --watch scss/style.scss:css/style.css
+/* ----------------------------------------------------
+文字設定
+---------------------------------------------------- */
+@mixin textClamp($len:2) {
+    overflow:hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $len;
+}
+/* ----------------------------------------------------
+レスポンシブ設定
+---------------------------------------------------- */
+
+$breakpoint-sm: 400px !default;
+$breakpoint-md: 768px !default;
+$breakpoint-lg: 1000px !default;
+
+$breakpoints: (
+'sm': 'screen and (min-width: 400px)',
+'md': 'screen and (min-width: 768px)',
+'lg': 'screen and (min-width: 1000px)',
+'xl': 'screen and (min-width: 1200px)',
+) !default;
+
+@mixin mq($breakpoint: md) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}
+@include mq() { // 引数を省略（初期値はmdの768px）
+  color: yellow;
+}
+/* ----------------------------------------------------
+margin
+---------------------------------------------------- */
+$i: 0;
+$num: "";
+@while $i <= 100 {
+    @if $i < 10 {
+        $num: "0#{$i}";
+    } @else {
+        $num: $i;
+    }
+    .mt#{$num} { margin-top:  0px + $i !important; }
+    .mr#{$num} { margin-right: 0px + $i !important; }
+    .mb#{$num} { margin-bottom: 0px + $i !important; }
+    .ml#{$num} { margin-left:  0px+$i !important; }
+    $i: $i + 5;
+}
+.ma{margin: auto;}
+/* ----------------------------------------------------
+padding
+---------------------------------------------------- */
+$ii: 0;
+$numi: "";
+@while $ii <= 100 {
+    @if $ii < 10 {
+        $numi: "0#{$ii}";
+    } @else {
+        $numi: $ii;
+    }
+    .pt#{$numi} { padding-top:  0px + $ii !important; }
+    .pr#{$numi} { padding-right: 0px + $ii !important; }
+    .pb#{$numi} { padding-bottom: 0px + $ii !important; }
+    .pl#{$numi} { padding-left: 0px + $ii !important; }
+    $ii: $ii + 5;
+}
+
+/* ----------------------------------------------------
+// width
+---------------------------------------------------- */
+$mii: 10;
+$numi: "";
+@while $mii <= 100 {
+    .wi#{$mii} {
+        width:0% + $mii;
+        height:auto;
+    }
+    $mii: $mii + 10;
+}
+/* ----------------------------------------------------
+// calc-width
+---------------------------------------------------- */
+$mwii: 0;
+$wnumi: "";
+@while $mwii <= 100 {
+    @if $mwii < 10 {
+        $wnumi: "0#{$mwii}";
+    } @else {
+        $wnumi: $mwii;
+    }
+    .wi-c#{$wnumi}{
+        width:calc(#{$mwii}% - 10px);
+    }
+    $mwii: $mwii + 25;
+}
+
+/* ----------------------------------------------------
+// PC・・SP切り替え
+---------------------------------------------------- */
+.pc{
+    display:none;
+    @include mq(){
+        display: block;
+    }
+}
+.sp{
+    display: block;
+    @include mq(){
+        display: none;
+    }
+}
+.none{
+    display: none
+}
+/* ----------------------------------------------------
+// レスポンシブwidth
+---------------------------------------------------- */
+.wi50-25{
+    width:calc(50% - 10px);
+    @include mq(){
+        width:calc(25% - 10px);
+    }
+}
+/* ----------------------------------------------------
+// フレックスボックス設定
+---------------------------------------------------- */
+.flbPc{
+    @include mq(){
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: space-between;
+    }
+}
+.flbSp{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: space-between;
+}
+@mixin flexboxSt(){
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: space-between;
+}
+
+
+*{
+	box-sizing:border-box;
+}
+
+///////////////////////////////////////////////////
+
+
+

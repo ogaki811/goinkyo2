@@ -1,22 +1,23 @@
 @charset "UTF-8";
 
-.ppp{
-    margin-top:10px;
-}
-
-
-.ddd{
-    margin-bottom: 10px;
-}
-
-.hhh{
+.ppp {
     margin-top: 10px;
 }
 
-.dj_ogawa{
+
+.ddd {
+    margin-bottom: 10px;
+}
+
+.hhh {
+    margin-top: 10px;
+}
+
+.dj_ogawa {
     margin-top: 0;
     margin-bottom: 0;
 }
+
 /* デフォルトの書体サイズ*/
 $df_font_size: 1.4rem;
 $title_font_size: 1.6rem;
@@ -28,5 +29,9 @@ $main_color: #FFFFFF;
 $head_color: #603813;
 
 body {
-  font-size: $df_font_size;
+    font-size: $df_font_size;
+}
+
+h2 {
+    padding-top: 0px;
 }
