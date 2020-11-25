@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ご隠居job | TOP</title>
+  <title>ご隠居job | ログ隠</title>
   <link rel="stylesheet" href="lib/css/reset.css" type="text/css" media="all">
   <link rel="stylesheet" href="lib/css/common.css" type="text/css" media="all">
 </head>
@@ -22,10 +22,12 @@
         <img src="lib/images/logo_PC.svg" alt="">
       </figure>
       <div class="inputBox"> 
-        <p class="mail">Mail<input type="text" /></p>
-        <p class="pw">PW<input type="password"></p>
-        <input type="submit" value="ログイン">
-        <a href="reset_pw.html">パスワードがわからなくなったら</a>
+        <label for="mail" class="mailLabel">Mail</label>
+        <p class="mailBox"><input type="text" name="mail" id="mail" /></p>
+        <label for="pw" class="pwLabel">Password</label>
+        <p class="pwBox"><input type="password" name="pw" id="pw"></p>
+        <input class="loginBtn" type="submit" value="ログ隠">
+        <p class="fp"><a href="reset_pw.html">パスワードがわからなくなったら</a></p>
       </div>
     </article>
   </section>
