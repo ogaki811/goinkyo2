@@ -24,9 +24,87 @@ $min_font_size: 1.3rem;
 
 /* カラー */
 $main_font_color: #666666;
-$main_color: #FFFFFF;
+$main_color: #ffffff;
 $head_color: #603813;
 
-body {
-  font-size: $df_font_size;
+/* ブレイクポイントのやつ */
+$breakpoints: (
+  "sp": "screen and (min-width: 375px)",
+  "tb": "screen and (min-width: 768px)",
+) !default;
+
+@mixin mq($breakpoint: sp) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+/* flexboxのやつ */
+@mixin flexBox($jc: space-between) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: $jc;
+}
+
+/* デフォルトのやつ */
+html {
+  font-size: 62.5%;
+}
+
+.login {
+  background-image: url(../images/login_bg.svg);
+  background-repeat:no-repeat;
+  background-position: 50% 50%;
+  background-attachment:fixed;
+}
+
+.topBorder {
+  position: absolute;
+  img {
+    width: 100%;
+    height: 2px;
+    max-width: 100%;
+    vertical-align: top;
+  }
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+
+  .loginBox {
+    width: 90%;
+    max-width: auto;
+    height: 400px;
+    border: 1px solid #C1C1C1;
+    border-radius: 5px;
+    position: absolute; 
+    left: 5%;
+    top: 30%;
+
+    .loginImg {
+      margin-top: 50px;
+      text-align: center;
+    }
+    .inputBox {
+      margin-top: 20px;
+      text-align: center;
+      .mail {
+        margin-bottom: 15px;
+        input {
+          margin-left: 10px;
+          width: 250px;
+          height: 40px;
+        }
+      }
+      .pw {
+        input {
+          margin-left: 10px;
+          width: 250px;
+          height: 40px;
+        }
+      }
+    }
+  }
 }
