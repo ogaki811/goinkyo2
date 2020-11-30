@@ -1,45 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ヘッダー</title>
-    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-   
-   <!-- drawer.css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/css/drawer.min.css">
-    <!-- jquery & iScroll -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script>
-    <!-- drawer.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/js/drawer.min.js"></script>
-    <link rel="stylesheet" href="lib/css/common.css">
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ヘッダー</title>
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+
+  <!-- drawer.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/css/drawer.min.css">
+  <!-- jquery & iScroll -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script>
+  <!-- drawer.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/js/drawer.min.js"></script>
+  <link rel="stylesheet" href="lib/css/common.css">
+
 </head>
 
 <body class="drawer drawer--left">
-    <div class="header_st">
+  <div class="header_st">
     <figure class="goinkyoBorder">
-        <img src="lib/images/goinkyosen2.png" alt="ご隠居線">
+      <img src="lib/images/goinkyosen2.png" alt="ご隠居線">
     </figure>
     <figure class="goinkyoLogo">
-        <img src="lib/images/logo.svg" alt="ご隠居logo">
+      <img src="lib/images/logo.svg" alt="ご隠居logo">
     </figure>
-    </div>
+  </div>
 
-    <header role="banner">
+  <header role="banner">
     <button type="button" class="drawer-toggle drawer-hamburger">
       <span class="sr-only">toggle navigation</span>
       <span class="drawer-hamburger-icon"></span>
     </button>
-    
-    <nav class="drawer-nav" role="navigation">
-    <figure class="goinkyoBorder pc">
-        <img src="lib/images/goinkyosen2.png" alt="ご隠居線">
-    </figure>
 
-      <div class="navhead">
-          <img src="lib/images/logo_pc.svg" alt="ご隠居logo">
+    <nav class="drawer-nav" role="navigation">
+      <figure class="goinkyoBorder pc">
+        <img src="lib/images/goinkyosen2.png" alt="ご隠居線">
+      </figure>
+
+      <div class="navhead pc">
+        <img src="lib/images/logo_pc.svg" alt="ご隠居logo">
+      </div>
+
+      <div class="aisatu">
+        <p>
+          おかえりなさい<br>
+          <span>山下さん</span>
+        </p>
       </div>
 
       <ul class="drawer-menu">
@@ -56,7 +65,7 @@
 
       <div class="footer">
         <img src="lib/images/site-logo.svg" alt="jointexlogo">
-        <p>Copyright(C) JOINTEX All Rights Reserved.</p> 
+        <p>Copyright(C) JOINTEX All Rights Reserved.</p>
       </div>
     </nav>
 
@@ -66,10 +75,11 @@
   <main role="main">
     <!-- Page content -->
   </main>
-    <script>
-        $(document).ready(function() {
-          $('.drawer').drawer();
-        });
-    </script>
+  <script>
+    $(document).ready(function () {
+      $('.drawer').drawer();
+    });
+  </script>
 </body>
+
 </html>
