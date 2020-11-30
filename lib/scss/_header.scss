@@ -26,8 +26,6 @@
 }
 
 .drawer-nav {
-
-
     .navhead {
         img {
             margin: 50px auto 30px;
@@ -43,9 +41,21 @@
         }
     }
 
+    .aisatu {
+        font-size: 1rem;
+        text-align: center;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+
     .yourpr {
         width: 75%;
-        margin: auto;
+        margin: 30px auto;
+
+        p {
+            text-align: center;
+            font-size: 1rem;
+        }
 
         textarea {
             width: 100%;
@@ -103,6 +113,24 @@
         border-right: solid 1px #f1f1f1;
         height: 100vh;
 
+        .navhead {
+            img {
+                margin: 50px auto 30px;
+                display: block;
+                width: 130px;
+            }
+        }
+
+        .goinkyoBorder {
+            img {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                position: absolute;
+                vertical-align: top;
+                height: 3px;
+            }
+        }
 
         .footer {
             position: absolute;

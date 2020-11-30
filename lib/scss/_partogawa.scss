@@ -1,0 +1,104 @@
+.tsklist {
+    .title {
+        font-size: 1.2rem;
+    }
+
+    .area {
+        font-size: 0.9rem;
+    }
+
+    .left {
+        font-size: 1rem;
+        width: calc(70% - 10px);
+
+        .otherdata {
+            font-size: 0.8rem;
+        }
+
+        .otherdata {
+            .price {
+                font-size: 1.2rem;
+                padding: 4px 5px 0px 5px;
+            }
+
+            .iraikoumoku {
+                color: #393939;
+                border: solid 1px #E8E8E8;
+
+                p {
+                    padding: 5px;
+                }
+
+                dt {
+                    // padding: 5px;
+                    background: #E8E8E8;
+                    display: table-cell;
+
+                    p {
+                        vertical-align: middle;
+                    }
+                }
+
+                dd {
+                    // padding: 5px;
+                    display: table-cell;
+
+                    p {
+                        vertical-align: middle;
+                    }
+                }
+
+
+            }
+        }
+    }
+
+    .right {
+        width: 30%;
+        font-size: 0.9rem;
+
+        li {
+            :first-child {
+                padding: 0 10px;
+                border-left: solid 1px #000;
+                border-right: solid 1px #000;
+
+                a {}
+            }
+        }
+    }
+}
+
+.tag {
+    padding: 5px;
+    background: #006016;
+    border-radius: 3px;
+    font-weight: bold;
+    color: #fff;
+    display: table-cell;
+
+    span {
+        vertical-align: middle;
+    }
+
+}
+
+a.acbtn {
+    width: calc(25% - 15px);
+    text-align: center;
+    padding: 0 15px;
+    line-height: 1.2;
+    box-sizing: border-box;
+    background: #549DF2;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 3px;
+    vertical-align: middle;
+}
+
+a.btn_syoukai {
+    box-sizing: border-box;
+    border: solid 1px #E23527;
+    border-radius: 3px;
+    color: #E23527;
+}
