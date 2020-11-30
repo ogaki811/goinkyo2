@@ -1,0 +1,63 @@
+@charset "UTF-8";
+
+/* デフォルトの書体サイズ*/
+$df_font_size: 1.4rem;
+$title_font_size: 1.6rem;
+$min_font_size: 1.3rem;
+
+/* カラー */
+$main_font_color: #222222;
+$main_white: #ffffff;
+$main_red: #E23527;
+$main_yellow: #DBC72C;
+$main_green: #76C426;
+$main_blue: #299B8D;
+$main_grey: #EEEEEE;
+$sub_grey: #F6F6F6;
+
+/* width */
+$df_txtBox_width : 200px;
+
+/* ブレイクポイントのやつ */
+$breakpoints: ("sp": "screen and (min-width: 375px)",
+  "tb": "screen and (min-width: 768px)",
+) !default;
+
+@mixin mq($breakpoint: sp) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+/* flexboxのやつ */
+@mixin flexBox($jc: space-between) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: $jc;
+}
+
+/* デフォルトのやつ */
+html {
+  font-size: 62.5%;
+}
+
+.commonParts {
+  width: 400px;
+  form {
+    label {
+      color: $main_font_color;
+      font-size: $df_font_size;
+      font-weight: bold;
+      display: block;
+    }
+    .txtField {
+      border: 1px solid $main_grey;
+      background-color: $sub_grey;
+      border-radius: 5px;
+      height: 30px;
+      width: $df_txtBox_width;
+      outline: nones;
+      margin-bottom: 10px;
+    }
+  }
+}
