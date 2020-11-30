@@ -1,5 +1,4 @@
 @charset "UTF-8";
-
 /* html5doctor.com Reset Stylesheet v1.6.1 Last Updated: 2010-09-17 Author: Richard Clark - http://richclarkdesign.com Twitter: @rich_clark */
 html,
 body,
@@ -1004,25 +1003,15 @@ padding
 ---------------------------------------------------- */
 @media screen and (min-width: 768px) {
   .flbPc {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    -webkit-box-pack: start;
-    -ms-flex-pack: start;
     justify-content: space-between;
   }
 }
 
 .flbSp {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
   justify-content: space-between;
 }
 
@@ -1100,27 +1089,26 @@ padding
   .header_st {
     display: none;
   }
-
   .drawer-toggle {
     display: none;
   }
-
   .drawer--left .drawer-nav {
     position: relative;
     left: 0;
     border-right: solid 1px #f1f1f1;
     height: 100vh;
   }
-
   .drawer--left .drawer-nav .footer {
     position: absolute;
     bottom: 10px;
   }
 }
 
+/*
 .ppp {
   margin-top: 10px;
 }
+
 
 .ddd {
   margin-bottom: 10px;
@@ -1134,7 +1122,7 @@ padding
   margin-top: 0;
   margin-bottom: 0;
 }
-
+*/
 /* デフォルトの書体サイズ*/
 /* カラー */
 /* ブレイクポイントのやつ */
@@ -1170,13 +1158,17 @@ html {
 
 .container .loginBox {
   width: 90%;
-  max-width: auto;
+  max-width: 440px;
   height: 400px;
   border: 1px solid #C1C1C1;
+  background-color: rgba(255, 255, 255, 0.3);
   border-radius: 5px;
   position: absolute;
-  left: 5%;
-  top: 30%;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
 }
 
 .container .loginBox .loginImg {
@@ -1189,28 +1181,129 @@ html {
   text-align: center;
 }
 
-.container .loginBox .inputBox .mail {
+.container .loginBox .inputBox .mailLabel {
+  display: inline-block;
+  width: 80%;
+  text-align: left;
+  font-weight: bold;
+  color: #222222;
+}
+
+.container .loginBox .inputBox .mailBox {
+  width: 80%;
+  margin-left: 10%;
   margin-bottom: 15px;
 }
 
-.container .loginBox .inputBox .mail input {
-  margin-left: 10px;
-  width: 250px;
-  height: 40px;
+.container .loginBox .inputBox .mailBox input {
+  width: 100%;
+  height: 35px;
+  border: 1px solid #E8E8E8;
+  box-shadow: 3px 3px 5px -2px rgba(0, 0, 0, 0.2);
 }
 
-.container .loginBox .inputBox .pw input {
-  margin-left: 10px;
-  width: 250px;
-  height: 40px;
+.container .loginBox .inputBox .pwLabel {
+  display: inline-block;
+  width: 80%;
+  text-align: left;
+  font-weight: bold;
+  color: #222222;
 }
 
-body {
+.container .loginBox .inputBox .pwBox {
+  width: 80%;
+  margin-left: 10%;
+  margin-bottom: 15px;
+}
+
+.container .loginBox .inputBox .pwBox input {
+  width: 100%;
+  height: 35px;
+  border: 1px solid #E8E8E8;
+  box-shadow: 3px 3px 5px -2px rgba(0, 0, 0, 0.2);
+}
+
+.container .loginBox .inputBox .loginBtn {
+  margin: 0 auto;
+  display: block;
+  width: 120px;
+  height: 30px;
+  border: 1px solid #E23527;
+  color: #E23527;
+  border-radius: 2px;
+  background-color: #ffffff;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  transition: 0.3s ease all;
+  font-weight: bold;
+}
+
+.container .loginBox .inputBox .loginBtn:hover {
+  background-color: #E23527;
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.container .loginBox .inputBox .rpBtn {
+  margin: 0 auto;
+  display: block;
+  width: 200px;
+  height: 30px;
+  border: 1px solid #299B8D;
+  color: #299B8D;
+  border-radius: 2px;
+  background-color: #ffffff;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  transition: 0.3s ease all;
+  font-weight: bold;
+}
+
+.container .loginBox .inputBox .rpBtn:hover {
+  background-color: #299B8D;
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.container .loginBox .inputBox .fp {
+  text-align: center;
+  color: #0076FF;
+  transition: 0.3s ease all;
+}
+
+.container .loginBox .inputBox .fp:hover {
+  text-decoration: underline;
+}
+
+/* デフォルトの書体サイズ*/
+/* カラー */
+/* width */
+/* ブレイクポイントのやつ */
+/* flexboxのやつ */
+/* デフォルトのやつ */
+html {
+  font-size: 62.5%;
+}
+
+.commonParts {
+  width: 400px;
+}
+
+.commonParts form label {
+  color: #222222;
   font-size: 1.4rem;
+  font-weight: bold;
+  display: block;
 }
 
-h2 {
-  padding-top: 0px;
+.commonParts form .txtField {
+  border: 1px solid #EEEEEE;
+  background-color: #F6F6F6;
+  border-radius: 5px;
+  height: 30px;
+  width: 200px;
+  outline: nones;
+  margin-bottom: 10px;
 }
 
 body {
@@ -1223,5 +1316,4 @@ body {
   padding: 0;
   margin: 5;
 }
-
 /*# sourceMappingURL=common.css.map */
